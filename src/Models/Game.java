@@ -1,6 +1,7 @@
 package Models;
 
 import Models.Enums.GameState;
+import Strategies.WinningStrategy;
 
 import java.util.ArrayList;
 import java.util.List;

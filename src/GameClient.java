@@ -1,4 +1,5 @@
 import Controller.GameController;
+import Models.Enums.GameState;
 import Models.Game;
 
 public class GameClient{

@@ -18,4 +18,9 @@ public class BotPlayer extends Player{
     public void setDifficultyLevel(DifficultyLevel difficultyLevel) {
         this.difficultyLevel = difficultyLevel;
     }
+
+    @Override
+    public Move makeMove(Board board) {
+        return null;
+    }
 }

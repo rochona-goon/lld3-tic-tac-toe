@@ -9,7 +9,11 @@ public class rowWinningStrategy implements WinningStrategy{
     HashMap<String, Integer> rowCounter[];
 
     public rowWinningStrategy(int size) {
-        this.rowCounter = new HashMap[size];
+        this.size = size;
+        this.rowCounter =new HashMap[size];
+        for(int i=0; i<size; i++) {
+            this.rowCounter[i] = new HashMap<>();
+        }
     }
 
 
@@ -31,8 +35,9 @@ public class rowWinningStrategy implements WinningStrategy{
         // OR ...
         // currRow.put(currSymbol, currRow.getOrDefault(currSymbol, 0) + 1);
 
-        if(currRow.get(currSymbol) == size)
-         return true;
+        if(currRow.get(currSymbol) == size){
+            return true;
+        }
 
         return false;
     }

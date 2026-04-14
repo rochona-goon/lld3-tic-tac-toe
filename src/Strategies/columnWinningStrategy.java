@@ -9,7 +9,12 @@ public class columnWinningStrategy implements WinningStrategy{
     HashMap<String, Integer> colCounter[];
 
     public columnWinningStrategy(int size) {
+        this.size = size;
         this.colCounter = new HashMap[size];
+
+        for(int i=0; i<size; i++) {
+            this.colCounter[i] = new HashMap<>();
+        }
     }
 
 

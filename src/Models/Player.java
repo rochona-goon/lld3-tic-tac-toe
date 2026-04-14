@@ -17,6 +17,14 @@ public abstract class Player {
         this.playerType = playerType;
     }
 
+    // Player can make different moves
+    public abstract Move makeMove(Board board);
+
+
+
+
+
+
     public int getPlayerId() {
         return playerId;
     }

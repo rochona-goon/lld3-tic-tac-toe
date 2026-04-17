@@ -54,9 +54,9 @@ public class diagonalWinningStrategy implements WinningStrategy {
             return false;
         }
 
-        for (int i = 0; i < 2; i++) {
-            System.out.println(i+": "+digCounter[i]);
-        }
+//        for (int i = 0; i < 2; i++) {
+//            System.out.println(i+": "+digCounter[i]);
+//        }
 
 
         return false;

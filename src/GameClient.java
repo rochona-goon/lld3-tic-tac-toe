@@ -1,5 +1,6 @@
 import Controller.GameController;
 import Models.*;
+import Models.Enums.DifficultyLevel;
 import Models.Enums.GameState;
 import Models.Enums.PlayerType;
 import Strategies.WinningStrategy;
@@ -16,8 +17,10 @@ public class GameClient{
 
         int boardSize = gameController.getBoardSize();
         List<Player> playerList = new ArrayList<>();
-        playerList.add(new HumanPlayer(7,"Player 1", new Symbol("X"), 28));
-        playerList.add(new HumanPlayer(29,"Player 2", new Symbol("O"), 27));
+        playerList.add(new HumanPlayer(7,"Pupu", new Symbol("X"), 28));
+//        playerList.add(new HumanPlayer(29,"Tuktuki Di", new Symbol("O"), 27));
+        playerList.add(new BotPlayer(2, "BOT", new Symbol("O"), DifficultyLevel.MEDIUM));
+
 
         List<WinningStrategy> winningStrategies = new ArrayList<>();
         winningStrategies.add(new rowWinningStrategy(boardSize));

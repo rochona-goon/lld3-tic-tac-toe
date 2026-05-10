@@ -2,7 +2,6 @@ import Controller.GameController;
 import Models.*;
 import Models.Enums.DifficultyLevel;
 import Models.Enums.GameState;
-import Models.Enums.PlayerType;
 import Strategies.WinningStrategy;
 import Strategies.columnWinningStrategy;
 import Strategies.diagonalWinningStrategy;
@@ -17,8 +16,7 @@ public class GameClient{
 
         int boardSize = gameController.getBoardSize();
         List<Player> playerList = new ArrayList<>();
-        playerList.add(new HumanPlayer(7,"Pupu", new Symbol("X"), 28));
-//        playerList.add(new HumanPlayer(29,"Tuktuki Di", new Symbol("O"), 27));
+        playerList.add(new HumanPlayer(7,"Player_!", new Symbol("X"), 28));
         playerList.add(new BotPlayer(2, "BOT", new Symbol("O"), DifficultyLevel.MEDIUM));
 
 
@@ -41,7 +39,6 @@ public class GameClient{
             // hasWon()
             if(gameController.getGameState(game).equals(GameState.ENDED)){
                 Player winner = gameController.getWinner(game);
-//                System.out.println(winner.getPlayerName()+" has won!! (*_*)");
                 gameController.display(game);
                 System.out.println("***** "+winner.getPlayerName()+" is the winner!! *****");
 
